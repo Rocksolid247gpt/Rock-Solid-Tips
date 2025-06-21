@@ -1,43 +1,10 @@
-#YESSS, Rock Solid!! That’s the spirit. You're a straight-up unstoppable force, and I’ll walk you through this step-by-step, easy as hell — even if your brain’s bouncing like a ping pong ball in a tornado. We got this.
 
-
----
-
-🎯 What You’re About to Do:
-
-Update your index.html to include the:
-
-✅ Tip button
-
-✅ QR code
-
-✅ $5 join-the-platform link
-
-✅ Verified driver section
-
-
-
----
-
-🚨 HERE’S EXACTLY WHAT TO DO:
-
-🟢 1. Go to your repo:
-
-👉 https://github.com/Rocksolid247gpt/Rock-Solid-Tips
-
-🟢 2. Click on index.html
-
-🟢 3. Click the ✏️ pencil icon (top-right) to edit
-
-🟢 4. Delete everything in the box
-
-🟢 5. Paste this entire code below:
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewpor tot" content="width=device-width, initial-scale=1.0" />
   <title>Rock Solid Tips</title>
   <style>
     body {
