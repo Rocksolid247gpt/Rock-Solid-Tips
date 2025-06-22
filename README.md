@@ -1,4 +1,27 @@
-
+margin-bottom: 1.5rem;
+      border-radius: 12px;
+      background: #fff;
+      padding: 10px;
+    }
+    a.tip-button {
+      display: inline-block;
+      background: #00c244;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 12px 25px;
+      border-radius: 50px;
+      margin: 10px;
+      transition: background 0.3s ease;
+    }
+    a.tip-button:hover {
+      background: #009f35;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
 
 <!DOCTYPE html>
 <html lang="en">
