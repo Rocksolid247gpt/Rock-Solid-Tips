@@ -1,64 +1,114 @@
-html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rock Solid Tips</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RockSolid Tips</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       color: #fff;
-      background: url('your-image.jpg') no-repeat center center fixed;
+      background: url('frank-background.jpg') no-repeat center center fixed;
       background-size: cover;
-      backdrop-filter: brightness(0.5);
     }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.65);
+    header {
+      background-color: rgba(0,0,0,0.7);
       padding: 2rem;
-      max-width: 800px;
-      margin: 5rem auto;
-      border-radius: 20px;
-      box-shadow: 0 0 20px #00ff88;
-    }
-    h1 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
       text-align: center;
     }
-    .button {
-      display: block;
-      margin: 2rem auto 0;
-      padding: 1rem 2rem;
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
       font-size: 1.2rem;
-      background-color: #00ff88;
-      color: #000;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
+    }
+    nav {
+      background-color: rgba(0,0,0,0.85);
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #00ffcc;
       text-decoration: none;
-      text-align: center;
+      font-weight: bold;
     }
-    .button:hover {
-      background-color: #00cc66;
+    .content {
+      background-color: rgba(0,0,0,0.6);
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      border-radius: 12px;
+    }
+    .content h2 {
+      color: #00ffcc;
+    }
+    .cta {
+      background-color: #00ffcc;
+      color: #000;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    footer {
+      background-color: rgba(0,0,0,0.8);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .qr {
+      display: block;
+      margin: 2rem auto;
+      max-width: 200px;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>Welcome to Rock Solid Tips</h1>
-    <p>
-      This isn’t just another tipping site — this is where real drivers connect with real customers.<br><br>
-      💬 Say thanks. 💸 Drop a tip. 🗣️ Leave a comment.<br>
-      It's your way to support the backbone of delivery nationwide.
-    </p>
-    <a class="button" href="https://cash.app/$YourCashTag" target="_blank">
-      Tip a Driver Now
-    </a>
+
+  <header>
+    <h1>RockSolid Tips</h1>
+    <p>Direct Tipping. Real Appreciation. No Middleman.</p>
+  </header>
+
+  <nav>
+    <a href="about.html">About RockSolid</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cashapp.html">CashApp Tag</a>
+    <a href="qr-code.html">QR Code</a>
+  </nav>
+
+  <div class="content">
+    <h2>Welcome to RockSolid Tips</h2>
+    <p>This platform was created to give **gig drivers nationwide** a personal way to receive direct tips, say thank you, and connect with the amazing people they serve.</p>
+
+    <p>We believe customers deserve transparency and drivers deserve recognition. Through RockSolid Tips, you can support your favorite delivery driver, leave feedback, and even say thanks directly — no apps, no extra fees.</p>
+
+    <p>Each driver pays a simple $5 joining fee and $1/month to stay active. That’s it. This keeps RockSolid **independent**, **honest**, and **driver-owned**.</p>
+
+    <div class="cta">
+      💸 Tip your driver now: <strong>$RockSolidTips</strong>
+    </div>
+
+    <img src="your-qr-code.png" alt="QR Code" class="qr">
+
+    <h2>Want to say thanks?</h2>
+    <p>You can leave a message, compliment, or review directly on the driver’s RockSolid page. Your feedback helps them grow and stay proud of the work they do.</p>
+
+    <p>If you’re a customer who wants to support your driver, you’re in the right place. If you’re a driver ready to get your own tipping page — welcome to the RockSolid family.</p>
   </div>
+
+  <footer>
+    Rooted in the Core. Marked by the Brand. Rock Solid for Life. <br>
+    &copy; 2025 RockSolid Tips. All Rights Reserved.
+  </footer>
+
 </body>
 </html>
