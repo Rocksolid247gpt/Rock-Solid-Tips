@@ -1,112 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rock Solid Tips</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('file-U2uf4xnnHPo8DmuyNqaP4T') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      padding: 2rem;
-      text-shadow: 1px 1px 3px #000;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rock Solid Tips</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        scroll-behavior: smooth;
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 2rem;
-      border-radius: 10px;
+
+    /* Sticky Navbar */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 15px 0;
+        z-index: 1000;
+        border-bottom: 2px solid #FFD700;
     }
-    h1, h2, h3 {
-      color: #fff950;
+
+    nav a {
+        color: #FFD700;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: 0.3s;
     }
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-weight: bold;
-      color: #b8ffb2;
+
+    nav a:hover {
+        color: #fff;
     }
-    .section {
-      margin-bottom: 2rem;
+
+    /* Hero Section */
+    .hero {
+        background: url('YOUR-FRANK-IMAGE-PATH.jpg') no-repeat center center / cover;
+        background-attachment: fixed; /* Parallax */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-top: 80px; /* To prevent nav overlap */
     }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="section">
-      <h2>Rock Solid Tips (Short Manifesto)</h2>
-      <p><strong>Direct tips. No middleman. No delays. No BS.</strong><br>
-      You worked for it. You earned it. You keep it.<br>
-      Built by drivers. For drivers. Powered by truth.<br>
-      <em>Let the Rock Solid begin.</em></p>
-    </div>
 
-    <div class="section">
-      <h2>To the Drivers:</h2>
-      <p>This is for every driver who got stiffed after sweating through traffic.<br>
-      For the single moms, side hustlers, night grinders, and early risers.<br>
-      For the ones doing real work while the system eats the reward.<br><br>
-      This is your platform.<br>
-      This is your power.<br>
-      <strong>This is Rock Solid.</strong></p>
-    </div>
+    .overlay {
+        background: rgba(0, 0, 0, 0.55);
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 1;
+    }
 
-    <div class="section">
-      <h2>The Reality We Face:</h2>
-      <ul>
-        <li>Spark pays your tip in pieces? Not here.</li>
-        <li>Instacart lets customers take back their tip days later? Not here.</li>
-        <li>Apps hide what the customer really tipped? Not here.</li>
-      </ul>
-      <p><strong>Rock Solid Tips changes all of that.</strong><br>
-      You get your own direct tip link.<br>
-      You control how you connect.<br>
-      You keep it all.</p>
-    </div>
+    .content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        text-align: center;
+        padding: 20px;
+    }
 
-    <div class="section">
-      <h2>Our Beliefs:</h2>
-      <ul>
-        <li><strong>We believe tips should go straight to the driver.</strong><br>
-        No slicing, no delays, no disappearing acts.</li>
-        <li><strong>We believe in transparency.</strong><br>
-        You should always know <em>what was tipped, when, and by whom.</em></li>
-        <li><strong>We believe in human connection.</strong><br>
-        Every driver deserves the right to thank their customer — not be silenced by a billion-dollar app.</li>
-      </ul>
-    </div>
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
 
-    <div class="section">
-      <h2>Why We Exist</h2>
-      <p>Rock Solid Tips was created by someone who knows the grind — from Spark to Instacart and beyond.<br>
-      This platform exists because we got tired of watching big gig apps take <strong>our tips</strong>, hide <strong>our totals</strong>, delay <strong>our pay</strong>, and block us from even saying <strong>thank you</strong>.<br><br>
-      You did the job. You earned the gratitude.<br>
-      <strong>No middlemen. No games. No disappearing dollars.</strong><br><br>
-      This isn’t just a tip platform. It’s a movement.</p>
-    </div>
+    ul {
+        list-style: none;
+        padding: 0;
+    }
 
-    <div class="section">
-      <h2>Our Cash App Tag</h2>
-      <p><strong>$rocksolidtips</strong></p>
-    </div>
+    li {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
 
-    <div class="section">
-      <h2>Privacy Policy</h2>
-      <p>Your data is yours. We don’t sell it, trade it, or play games with it. We exist to move money from customer to driver — and nothing else.</p>
-    </div>
+    p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
 
-    <div class="section">
-      <h2>Terms of Service</h2>
-      <p>By using Rock Solid Tips, you agree to respect every driver’s hustle and every customer’s generosity. This is a platform built on truth, connection, and direct support.</p>
-    </div>
+    .highlight {
+        color: #FFD700;
+        font-weight: bold;
+        animation: glow 2s infinite alternate;
+    }
 
-    <footer>
-      Rooted in the Core. Marked by the Brand. Rock Solid for Life.
-    </footer>
-  </div>
-</body>
-</html>
+    @keyframes glow {
+        0% { text-shadow: 0 0 10px #FFD700; }
+        100% { text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700; }
+    }
+
+    .movement {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    /* Button */
+    .btn {
+        display: inline-block;
+        background: #FFD700;
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 15px 30px;
+        margin-top: 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #000;
+        color: #FFD700;
+        border: 2px solid #FFD700;
+    }
+
+    /* Sections */
+    section {
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    #about {
+        background: #111;
+        color
