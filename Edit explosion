@@ -10,5 +10,7 @@
       padding: 0;
       background-image: url('explosion-bg.png');
       background-size: cover;
-      background-position: center;
+      background-position: center
+
+;
 à
