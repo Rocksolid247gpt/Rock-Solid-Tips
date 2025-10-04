@@ -1,5 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<ht
+  <h1>Welcome to Rock Solid Tips</h1>
+
+
+<section style="margin-top: 2rem;">
+  <h3>💵 Join for $6.99 – Stay Active for $1.99/month</h3>
+  <p>This isn't optional. This is your new lifeline for direct tipping – no middlemen, no games. Just you and your gratitude stream.</p>
+</section>
+
+<section style="margin-top: 2rem;">
+  <h3>🚗 Driver Signup</h3>
+  <p>Click below to officially sign up and connect your Stripe account.</p>
+  <a href="https://buy.stripe.com/test_XXXXXXXX" target="_blank" style="display:inline-block; margin-top:1rem; padding:1rem 2rem; background-color: gold; color: black; font-weight: bold; text-decoration: none; border-radius: 8px;">Join Now</a>
+</section>
+
+<section style="margin-top: 2rem;">
+  <h3>🧭 How It Works</h3>
+  <p>Join. Add your Stripe link. Get direct tips. It’s that simple.</p>
+</section>
+
+<section style="margin-top: 2rem;">
+  <h3>📜 Terms</h3>
+  <p>By joining Rock Solid Tips, you agree to our no-refund, no-excuse policy. You're representing a movement. <a href="terms.html" style="color: yellow;">Read Terms</a>.</p>
+</section>
+
+<section style="margin-top: 2rem;">
+  <h3>🔐 Privacy</h3>
+  <p>We protect your data. Nothing is shared. <a href="privacy.html" style="color: yellow;">Read Policy</a>.</p>
+</section>
+
+<footer style="margin-top: 3rem; font-size: 0.9rem; color: #aaa;">
+  <p>Rooted in the Core. Marked by the Brand. Rock Solid for Life.</p>
+</footer>
+    ml lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
