@@ -1,56 +1,69 @@
-<!DOCTYPE html><html lang="en">I'm
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Solid Tips</title>
   <style>
-    <style>
-  body {
-    background-image: url("frank.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    text-shadow: 1px 1px 3px #000;
-  }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #ff1493;
+      font-family: 'Arial Black', sans-serif;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
 
-  h1 {
-    text-align: center;
-    margin-top: 80px;
-    font-size: 3em;
-  }
-</style>
+    h1, p, a {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlideIn 1s ease forwards;
+    }
 
-<body>
-  <h1>Welcome to Rock Solid Tips</h1>
-  <!-- Everything else goes here -->
-</body>
-  font-size: 3em;
-  margin-bottom: 0.5em;
-}
+    h1 {
+      font-size: 3em;
+      margin: 0.5em 0;
+      animation-delay: 0.2s;
+    }
 
-p {
-  font-size: 1.2em;
-  margin-bottom: 2em;
-}
+    p {
+      font-size: 1.3em;
+      max-width: 600px;
+      line-height: 1.5;
+      animation-delay: 0.5s;
+    }
 
-a {
-  color: #00ffff;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  margin: 1em 0;
-}
-Frank.png
+    a {
+      color: #ff69b4;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: 1em;
+      animation-delay: 0.8s;
+    }
+
+    a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #ff69b4;
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
   <h1>Welcome to Rock Solid Tips</h1>
-  <p>Rooted in the Core. Marked by the Brand. Rock Solid for Life.</p>
-  <a href="terms.html">Terms of Service</a>
-  <a href="privacy.html">Privacy Policy</a>
+  <p>Built by the Core. Marked by the Brand. Rock Solid for Life.</p>
+  <a href="about.html">Learn More</a>
 </body>
 </html>
