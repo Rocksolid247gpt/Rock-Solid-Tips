@@ -61,10 +61,45 @@
 </head>
 <body>
   <div class="signup-box">
-    <h1>Join Rock Solid</h1>
-    <a bref="index.html"
-      style="color;white;display;
-      block;margin-top:20px;">
-      Back to Home</a>
-    <form action="#" method="POST">
-      <label for
+    
+<h1>Join Rock Solid Tips</h1>
+
+<p style="text-align:center;">
+  Support drivers directly. Stay connected. Be Rock Solid.
+</p>
+
+<form action="#" method="POST">
+
+  <label for="name">Full Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="phone">Phone Number (Optional)</label>
+  <input type="tel" id="phone" name="phone">
+
+  <label for="role">I am a:</label>
+  <select id="role" name="role" required>
+    <option value="">Select One</option>
+    <option value="driver">Gig Driver</option>
+    <option value="customer">Customer</option>
+    <option value="supporter">Supporter</option>
+  </select>
+
+  <label for="message">Message (Optional)</label>
+  <textarea id="message" name="message"></textarea>
+
+  <p style="font-size:0.9em; margin-top:15px; text-align:center;">
+    By signing up, you agree to our 
+    <a href="terms.html">Terms of Service</a> and 
+    <a href="privacy.html">Privacy Policy</a>.
+  </p>
+
+  <button type="submit">Continue to Payment</button>
+
+</form>
+
+<p style="margin-top:25px; text-align:center;">
+  <a href="index.html">⬅ Back to Home</a>
+</p>
