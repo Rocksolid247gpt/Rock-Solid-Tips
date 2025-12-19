@@ -1,15 +1,203 @@
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="en">
 <head>
-  <title>How It Works - RockSolid Tips</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How It Works | Rock Solid Tips</title>
+
+  <style>
+    :root{
+      --bg:#000000;
+      --panel:#0d0d0d;
+      --text:#f5f5f5;
+      --muted:#b3b3b3;
+      --accent:#ff2fa4; /* HOT PINK */
+      --line:rgba(255,255,255,.15);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.7;
+    }
+
+    a{
+      color: var(--accent);
+      text-decoration:none;
+    }
+    a:hover{ text-decoration:underline; }
+
+    header{
+      border-bottom:1px solid var(--line);
+      background: var(--panel);
+    }
+
+    nav{
+      max-width:960px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+    }
+
+    .brand strong{
+      font-size:16px;
+      letter-spacing:.4px;
+      color: var(--accent);
+    }
+
+    .links{
+      display:flex;
+      gap:14px;
+      font-size:13px;
+    }
+
+    main{
+      max-width:960px;
+      margin:0 auto;
+      padding:44px 18px 60px;
+    }
+
+    h1{
+      font-size:36px;
+      margin:0 0 18px;
+      color: var(--accent);
+      letter-spacing:.3px;
+    }
+
+    h2{
+      font-size:20px;
+      margin:36px 0 12px;
+      color: var(--accent);
+    }
+
+    p{
+      margin:0 0 16px;
+    }
+
+    .muted{
+      color: var(--muted);
+    }
+
+    .panel{
+      border:1px solid var(--line);
+      background: var(--panel);
+      padding:24px;
+      border-radius:14px;
+      margin:28px 0;
+    }
+
+    ol{
+      padding-left:20px;
+      margin:12px 0;
+    }
+
+    li{
+      margin:10px 0;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background: var(--panel);
+    }
+
+    footer .inner{
+      max-width:960px;
+      margin:0 auto;
+      padding:18px;
+      font-size:12px;
+      color: var(--muted);
+    }
+  </style>
 </head>
+
 <body>
+
+<header>
+  <nav>
+    <div class="brand">
+      <strong>Rock Solid Tips</strong>
+    </div>
+    <div class="links">
+      <a href="../index.html">Main</a>
+      <a href="about.html">About</a>
+      <a href="qrcode.html">QR Code</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
   <h1>How It Works</h1>
-  <ol>
-    <li>Drivers pay a $5 sign-up fee to get listed.</li>
-    <li>Customers scan the QR code or click a direct tip link.</li>
-    <li>All tips go directly to the driver’s no third-party handling.</li>
-    <li>Drivers stay active for $1/month to keep their link live.</li>
-  </ol>
+
+  <p class="muted">
+    Rock Solid Tips is designed to be simple, direct, and honest — for both drivers and customers.
+  </p>
+
+  <h2>For Customers</h2>
+
+  <div class="panel">
+    <ol>
+      <li>Scan the driver’s QR code.</li>
+      <li>Choose a tip amount.</li>
+      <li>Your tip goes directly to the driver.</li>
+    </ol>
+  </div>
+
+  <p>
+    No accounts to create. No apps to download. No confusion.
+  </p>
+
+  <h2>For Drivers</h2>
+
+  <div class="panel">
+    <ol>
+      <li>Share your Rock Solid Tips QR code with customers.</li>
+      <li>Customers tip you directly.</li>
+      <li>You receive and control your tips.</li>
+    </ol>
+  </div>
+
+  <p>
+    You decide how tips are received and managed using your chosen payment method.
+  </p>
+
+  <h2>What Makes It Different</h2>
+
+  <p>
+    Rock Solid Tips removes middlemen, delays, and split payouts. Tips are not bundled, held, or rerouted through platforms.
+  </p>
+
+  <p>
+    It’s a direct connection between the person who did the work and the person who wants to say thank you.
+  </p>
+
+  <h2>Why It Works</h2>
+
+  <p>
+    When tipping is simple and transparent, everyone wins. Customers know where their money goes, and drivers keep control of what they earned.
+  </p>
+
+  <p>
+    That’s the entire system. No extras. No tricks.
+  </p>
+
+</main>
+
+<footer>
+  <div class="inner">
+    © Rock Solid Tips. All rights reserved.
+  </div>
+</footer>
+
 </body>
 </html>
