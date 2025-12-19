@@ -1,37 +1,183 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Terms of Service • Rock Solid Tips</title>
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Service | Rock Solid Tips</title>
+
+  <style>
+    :root{
+      --bg:#000000;
+      --panel:#0b0b0b;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --accent:#2dd4bf; /* turquoise */
+      --line:rgba(255,255,255,.12);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.6;
+    }
+
+    a{
+      color: var(--accent);
+      text-decoration:none;
+    }
+    a:hover{ text-decoration:underline; }
+
+    header{
+      border-bottom:1px solid var(--line);
+      background: var(--panel);
+    }
+
+    nav{
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+    }
+
+    .brand strong{
+      font-size:16px;
+      letter-spacing:.3px;
+      color: var(--accent);
+    }
+
+    .links{
+      display:flex;
+      gap:14px;
+      font-size:13px;
+    }
+
+    main{
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 36px 18px 48px;
+    }
+
+    h1{
+      font-size:32px;
+      margin:0 0 18px;
+      color: var(--accent);
+    }
+
+    h2{
+      font-size:18px;
+      margin:28px 0 8px;
+      color: var(--accent);
+    }
+
+    p{
+      margin:0 0 12px;
+      color: var(--text);
+    }
+
+    .muted{
+      color: var(--muted);
+      font-size:14px;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background: var(--panel);
+    }
+
+    footer .inner{
+      max-width:960px;
+      margin:0 auto;
+      padding:18px;
+      font-size:12px;
+      color: var(--muted);
+    }
+  </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header class="header">
-      <nav class="nav">
-        <div class="brand">
-          <strong>Rock Solid Tips</strong>
-          <span>Terms</span>
-        </div>
-        <div class="links">
-          <a href="../index.html">Main</a>
-          <a href="about.html">About</a>
-          <a href="how-it-works.html">How It Works</a>
-          <a href="qrcode.html">QR Code</a>
-          <a href="cashtag.html">Cash Tag</a>
-          <a href="privacy.html">Privacy</a>
-        </div>
-      </nav>
-    </header>
 
-    <main class="container page">
-      <h1>Terms of Service</h1>
-      <p>
-        Rock Solid Tips is an independently developed direct-tipping concept, including its structure, workflow, branding, and user experience. Unauthorized duplication, imitation, or commercial use of this concept or its substantially similar features without express permission is prohibited.
-      </p>
-      <p class="small">All rights reserved.</p>
-    </main>
+<header>
+  <nav>
+    <div class="brand">
+      <strong>Rock Solid Tips</strong>
+    </div>
+    <div class="links">
+      <a href="../index.html">Main</a>
+      <a href="about.html">About</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </nav>
+</header>
 
-    <footer class="footer"><div class="container"><div class="small">All rights reserved.</div></div></footer>
-  <
+<main>
+  <h1>Terms of Service</h1>
+
+  <p class="muted">
+    Last updated: <script>document.write(new Date().toLocaleDateString());</script>
+  </p>
+
+  <h2>1. Overview</h2>
+  <p>
+    Rock Solid Tips is an independently developed direct-tipping concept designed to allow customers to tip service providers directly. Rock Solid Tips does not act as an employer, payment processor, or intermediary for tips.
+  </p>
+
+  <h2>2. No Platform Affiliation</h2>
+  <p>
+    Rock Solid Tips is not affiliated with, endorsed by, or partnered with any delivery platform, gig company, or third-party service unless explicitly stated.
+  </p>
+
+  <h2>3. Payments</h2>
+  <p>
+    Any payments or tips made using links or QR codes associated with Rock Solid Tips are processed through third-party payment services chosen by the individual driver or service provider.
+  </p>
+  <p>
+    Rock Solid Tips does not collect, hold, process, or distribute tip funds.
+  </p>
+
+  <h2>4. Fees</h2>
+  <p>
+    Access to certain Rock Solid Tips services may require a one-time joining fee of <strong>$7.99</strong> and may include an ongoing monthly fee as disclosed at the time of signup.
+  </p>
+
+  <h2>5. No Guarantees</h2>
+  <p>
+    Rock Solid Tips makes no guarantees regarding tip amounts, payment timing, customer participation, or income.
+  </p>
+
+  <h2>6. Intellectual Property</h2>
+  <p>
+    Rock Solid Tips, including its structure, workflow, branding, written content, and overall concept, is protected intellectual property.
+  </p>
+  <p>
+    Unauthorized duplication, imitation, or commercial use of this concept or its substantially similar features without express permission is prohibited.
+  </p>
+
+  <h2>7. Limitation of Liability</h2>
+  <p>
+    Rock Solid Tips shall not be liable for any damages, losses, or disputes arising from the use of third-party payment services or customer interactions.
+  </p>
+
+  <h2>8. Changes to Terms</h2>
+  <p>
+    These Terms may be updated at any time. Continued use of Rock Solid Tips constitutes acceptance of any revised terms.
+  </p>
+
+</main>
+
+<footer>
+  <div class="inner">
+    © Rock Solid Tips. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
