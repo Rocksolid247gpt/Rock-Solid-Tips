@@ -68,36 +68,15 @@
   Support drivers directly. Stay connected. Be Rock Solid.
 </p>
 
-<form action="https://buy.stripe.com/test_SkQfZhcvybr96p15D6Cao04" method="GET">
-  <label for="name">Full Name</label>
-  <input type="text" id="name" name="name" required>
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
 
-  <label for="email">Email Address</label>
-  <input type="email" id="email" name="email" required>
-
-  <label for="phone">Phone Number (Optional)</label>
-  <input type="tel" id="phone" name="phone">
-
-  <label for="role">I am a:</label>
-  <select id="role" name="role" required>
-    <option value="">Select One</option>
-    <option value="driver">Gig Driver</option>
-    <option value="customer">Customer</option>
-    <option value="supporter">Supporter</option>
-  </select>
-
-  <label for="message">Message (Optional)</label>
-  <textarea id="message" name="message"></textarea>
-
-  <p style="font-size:0.9em; margin-top:15px; text-align:center;">
-    By signing up, you agree to our 
-    <a href="terms.html">Terms of Service</a> and 
-    <a href="privacy.html">Privacy Policy</a>.
-  </p>
-
-  <button type="submit">Continue to Payment</button>
-
-</form>
+<stripe-buy-button
+  buy-button-id="buy_btn_1SgQ0UHVuXlMjA5ENQ5QL9J7"
+  publishable-key="pk_live_51S5NTzHVuXlMjA5EIrj44xgRd46VWwWVxtjGNCh6aTcVJAQ9NfazwMFwcAobRC86aOvzEqLqYAlvhgN0ZQFpWOL900041MvHxp"
+>
+</stripe-buy-button>
 
 <p style="margin-top:25px; text-align:center;">
   <a href="index.html">⬅ Back to Home</a>
