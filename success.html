@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to Rock Solid Tips</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 24px; line-height: 1.4; }
+    .card { max-width: 760px; margin: 0 auto; padding: 22px; border: 1px solid #ddd; border-radius: 14px; }
+    h1 { margin: 0 0 10px 0; }
+    .btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+    a.btn { display: inline-block; padding: 12px 16px; border-radius: 10px; text-decoration: none; border: 1px solid #000; }
+    a.primary { background: #000; color: #fff; }
+    a.secondary { background: transparent; color: #000; }
+    .small { font-size: 14px; opacity: 0.85; margin-top: 14px; }
+    .steps { margin: 12px 0 0 18px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>✅ Payment received</h1>
+    <p>You’re officially in. Next step: choose how you want to receive tips.</p>
+
+    <ol class="steps">
+      <li><strong>Cash App (fastest):</strong> send us your <strong>$Cashtag</strong>.</li>
+      <li><strong>Card tips (optional):</strong> connect Stripe so customers can tip by card.</li>
+      <li><strong>Your QR code:</strong> once your setup is done, you’ll get your personal QR code + tip link.</li>
+    </ol>
+
+    <div class="btns">
+      <!-- Replace these with YOUR real contact links -->
+      <a class="btn primary" href="mailto:YOUR_EMAIL_HERE?subject=Rock%20Solid%20Tips%20-%20My%20Cash%20App%20Cashtag&body=Hi%20Rock%20Solid%20Tips%2C%0A%0AMy%20name%3A%20%0AMy%20Cash%20App%20%24cashtag%3A%20%0A%0AThank%20you!">Send my $Cashtag</a>
+
+      <!-- Replace this link later with your Stripe Connect onboarding link -->
+      <a class="btn secondary" href="YOUR_STRIPE_CONNECT_LINK_HERE">Connect Stripe (optional)</a>
+
+      <!-- Optional: send them back to your homepage -->
+      <a class="btn secondary" href="./index.html">Back to site</a>
+    </div>
+
+    <p class="small">
+      Heads up: Your Rock Solid Tips access stays active as long as your membership stays active.
+    </p>
+  </div>
+</body>
+</html>
