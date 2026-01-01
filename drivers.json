@@ -1,0 +1,16 @@
+{
+  "frank": {
+    "name": "Frank the Rock",
+    "cashapp": "$FrankTheRock",
+    "stripe": "https://buy.stripe.com/test123",
+    "message": "Thanks for supporting me out here on the grind!",
+    "image": "images/frank.png"
+  },
+  "susan": {
+    "name": "Susan Dash",
+    "cashapp": "$SusanDash",
+    "stripe": "https://buy.stripe.com/test456",
+    "message": "Appreciate the love! Every tip helps.",
+    "image": "images/susan.png"
+  }
+}
