@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support Your Driver – Rock Solid Tips</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="driver-profile" style="text-align:center; padding: 40px;">
+    <img id="driver-image" src="" alt="Driver Image" style="width:150px; border-radius:50%; display:none;"><br><br>
+    <h1 id="driver-name">Loading...</h1>
+    <p id="driver-message"></p>
+    <div id="tip-buttons" style="margin-top: 30px;"></div>
+  </div>
+
+  <script>
+    async function loadDriver() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+
+      if (!id) {
+        document.getElementById('driver-profile').innerHTML = "<h2>No driver ID provided.</h2>";
+        return;
+      }
+
+      const res = await fetch('drivers.json');
+      const drivers = await res.json();
+
+      const driver = drivers[id];
+
+      if (!driver) {
+        document.getElementById('driver-profile').innerHTML = "<h2>Driver not found.</h2>";
+        return;
+      }
+
+      document.getElementById('driver-name').textContent = driver.name;
+      document.getElementById('driver-message').textContent = driver.message;
+
+      if (driver.image) {
+        const img = document.getElementById('driver-image');
+        img.src = driver.image;
+        img.style.display = 'inline-block';
+      }
+
+      const tipDiv = document.getElementById('tip-buttons');
+      if (driver.cashapp) {
+        tipDiv.innerHTML += `<a href="https://cash.app/${driver.cashapp.replace('$','')}" target="_blank" class="tip-button">Tip via Cash App</a><br><br>`;
+      }
+      if (driver.stripe) {
+        tipDiv.innerHTML += `<a href="${driver.stripe}" target="_blank" class="tip-button">Tip via Card (Stripe)</a>`;
+      }
+    }
+
+    loadDriver();
+  </script>
+</body>
+</html>
