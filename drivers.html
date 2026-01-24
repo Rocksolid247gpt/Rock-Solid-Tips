@@ -43,8 +43,7 @@
       }
 
       const tipDiv = document.getElementById('tip-buttons');
-      if (driver.cashapp) {
-        tipDiv.innerHTML += `<a href="https://cash.app/${driver.cashapp.replace('$','')}" target="_blank" class="tip-button">Tip via Cash App</a><br><br>`;
+      
       }
       if (driver.stripe) {
         tipDiv.innerHTML += `<a href="${driver.stripe}" target="_blank" class="tip-button">Tip via Card (Stripe)</a>`;
