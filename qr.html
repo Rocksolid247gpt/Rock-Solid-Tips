@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>QR Zone | Rock Solid Tips</title>
   <style>
     body {
@@ -11,6 +11,7 @@
       text-align: center;
       padding: 50px;
     }
+
     img.qr {
       width: 300px;
       margin: 20px auto;
@@ -20,35 +21,33 @@
       background: white;
       padding: 10px;
     }
+
     .label {
       font-size: 28px;
       margin-top: 30px;
     }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
   </style>
 </head>
 <body>
+
   <h1>Scan to Get Started</h1>
 
-  <!-- JOIN QR CODE -->
-<img
-  src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://buy.stripe.com/7sYeVdgWq2HsbhrgfL7Re02"
-  alt="Join Rock Solid Tips QR"
-  class="qr"
-/>
+  <!-- JOIN QR -->
+  <div class="label">Join Rock Solid Tips</div>
+  <a href="https://buy.stripe.com/7sYeVdgWq2HsbhrgfL7Re02" target="_blank">
+    <img src="images/driver_qr_pinkmetal.png" alt="Join QR" class="qr">
+  </a>
 
-<img
-  src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://buy.stripe.com/cNibJ1cGa81Mclve7D7Re04"
-  alt="Tip Your Driver QR"
-  class="qr"
-/>
-  class="qr"
-/>
+  <!-- TIP QR -->
+  <div class="label">Tip Your Driver</div>
+  <a href="https://buy.stripe.com/cNibJ1cGa81Mclve7D7Re04" target="_blank">
+    <img src="images/customer_tip_qr_hotpink-1.png" alt="Tip QR" class="qr">
+  </a>
 
-<!-- TIP QR CODE -->
-<div class="label">Tip Your Driver</div>
-<img
-  src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://buy.stripe.com/cNibJ1cGa81Mclve7D7Re04"
-  alt="Tip Your Driver QR"
-  class="qr"
-/>
 </body>
+</html>
