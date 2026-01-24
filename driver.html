@@ -1,1 +1,76 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Driver Sign-Up Complete | Rock Solid Tips</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: cursive;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: hotpink;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    input, button {
+      padding: 12px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+    }
+
+    input {
+      background-color: #222;
+      color: white;
+    }
+
+    button {
+      background-color: hotpink;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: deeppink;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Rock Solid Tips</h1>
+  <p>Thanks for joining the platform! You’re almost ready to start receiving direct tips.</p>
+  <p>Fill out the info below and you’ll receive your personal Stripe QR code within 24 hours.</p>
+
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="Driver Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <input type="tel" name="Phone" placeholder="Your Phone Number" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p style="margin-top: 40px; font-style: italic;">Rock Solid. Built by the Core. Marked by the Brand.</p>
+</body>
+</html>
