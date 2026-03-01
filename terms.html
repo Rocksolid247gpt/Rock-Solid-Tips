@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Service | Rock Solid Tips</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- IMPORTANT: this must match your real stylesheet filename -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ONLY fixes cut-off without changing your theme -->
+  <style>
+    /* Do NOT set colors here. Only prevent clipping. */
+    html, body { height: auto; min-height: 100%; margin: 0; }
+    body { overflow-x: hidden; overflow-y: auto; }
+
+    /* Prevent any container from chopping text */
+    main, .container, .content, .page, .wrap {
+      height: auto !important;
+      max-height: none !important;
+      overflow: visible !important;
+    }
+
+    /* Make long lines behave on mobile */
+    main, .container, .content, .page, .wrap, p {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    /* Give readable spacing without forcing a white card */
+    .terms-wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+  </style>
 </head>
 
 <body>
 
+  <!-- Keep your normal nav links -->
   <nav>
     <a href="index.html">Main</a>
     <a href="about.html">About</a>
     <a href="howitworks.html">How It Works</a>
     <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
+    <a href="terms.html" aria-current="page">Terms</a>
   </nav>
 
-  <main style="max-width: 900px; margin: 40px auto; padding: 20px;">
-
+  <main class="terms-wrap">
     <h1>Terms of Service</h1>
-    <p><strong>Last Updated:</strong> 3/1/2026</p>
+    <p><strong>Last Updated:</strong> March 1, 2026</p>
 
     <h2>1. Overview</h2>
     <p>Rock Solid Tips is an independently developed digital membership platform that provides QR visibility tools designed to allow customers to tip independent service providers directly.</p>
-    <p>Rock Solid Tips does not act as an employer, payment processor, money transmitter, escrow service, financial institution, or intermediary for customer tips.</p>
-    <p>By accessing or using the platform, you agree to these Terms.</p>
-
-    <h2>2. Independent Drivers</h2>
-    <p>Drivers using Rock Solid Tips are independent contractors and are not employees, agents, partners, or representatives of Rock Solid Tips.</p>
-    <p>Rock Solid Tips does not supervise, control, or direct driver services, deliveries, pricing, or customer interactions.</p>
-    <p>Drivers are solely responsible for their conduct, tax obligations, legal compliance, licenses, and management of their payment accounts.</p>
-
-    <h2>3. Direct Tip Transactions</h2>
-    <p>Rock Solid Tips does not collect, hold, process, transmit, distribute, or take custody of customer tips at any time.</p>
-    <p>All tips are paid directly from customers to drivers using the
+    <p>Rock Solid Tips does not act as an employer, payment
