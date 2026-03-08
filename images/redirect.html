@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .wrap {
+      padding: 30px;
+      max-width: 500px;
+    }
+
+    h1 {
+      color: #ff4fd8;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #ddd;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 24px;
+      background: #ff4fd8;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 id="title">Redirecting...</h1>
+    <p id="message">Please wait while we send you to the right page.</p>
+    <a id="manualLink" class="button" href="#">Continue</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type");
+
+    let targetUrl = "index.html";
+    let titleText = "Redirecting...";
+    let messageText = "Please wait while we send you to the right page.";
+
+    if (type === "join") {
+      targetUrl = "YOUR_JOIN_LINK_HERE";
+      titleText = "Join Rock Solid Tips";
+      messageText = "You are being redirected to the join page.";
+    } else if (type === "tip") {
+      targetUrl = "YOUR_TIP_LINK_HERE";
+      titleText = "Tip Direct";
+      messageText = "You are being redirected to the tip page.";
+    }
+
+    document.getElementById("title").textContent = titleText;
+    document.getElementById("message").textContent = messageText;
+    document.getElementById("manualLink").href = targetUrl;
+
+    setTimeout(() => {
+      window.location.href = targetUrl;
+    }, 1500);
+  </script>
+</body>
+</html>
