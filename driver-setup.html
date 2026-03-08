@@ -1,1 +1,24 @@
 
+<h2>Create Your Rock Solid Tips QR Code</h2>
+
+<p>Paste your Stripe tipping link below and generate your personal QR code.</p>
+
+<input id="stripeLink" placeholder="Paste your Stripe tip link">
+
+<button onclick="generate()">Generate My QR Code</button>
+
+<div id="qrcode"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+function generate() {
+
+let link = document.getElementById("stripeLink").value;
+
+document.getElementById("qrcode").innerHTML = "";
+
+new QRCode(document.getElementById("qrcode"), link);
+
+}
+</script>
