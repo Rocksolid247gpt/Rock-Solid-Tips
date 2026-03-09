@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Rock Solid Tips</title>
+
+<style>
+
+body{
+background:#000;
+color:#fff;
+font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+text-align:center;
+}
+
+.container{
+max-width:850px;
+margin:auto;
+padding:70px 25px;
+}
+
+h1{
+font-size:2.9rem;
+color:#ff4fd8;
+margin-bottom:20px;
+text-shadow:0 0 12px rgba(255,79,216,.6);
+}
+
+h2{
+font-size:1.6rem;
+margin-bottom:30px;
+}
+
+p{
+font-size:1.15rem;
+line-height:1.8;
+margin-bottom:20px;
+color:#eee;
+}
+
+.highlight{
+color:#ff4fd8;
+font-weight:bold;
+}
+
+.block{
+border:2px solid #ff4fd8;
+border-radius:18px;
+padding:30px;
+margin:35px auto;
+background:rgba(255,255,255,0.04);
+box-shadow:0 0 18px rgba(255,79,216,.25);
+}
+
+.button{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+background:#ff4fd8;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+font-size:1.05rem;
+}
+
+.button:hover{
+background:#ff7ae5;
+}
+
+.footer{
+margin-top:40px;
+color:#bbb;
+font-style:italic;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>You’re In.</h1>
+
+<h2>Welcome to the <span class="highlight">Rock Solid Tips Founder Launch</span></h2>
+
+<div class="block">
+
+<p>
+This isn’t just another platform.
+</p>
+
+<p>
+This is the start of something built differently.
+</p>
+
+<p>
+No corporate middleman taking a cut of your tips.
+</p>
+
+<p>
+No games.
+</p>
+
+<p>
+Just workers supporting workers.
+</p>
+
+</div>
+
+<div class="block">
+
+<p>
+You are now part of the <span class="highlight">Founding Members</span> who helped launch Rock Solid Tips.
+</p>
+
+<p>
+The people who believe service workers deserve
+<span class="highlight">direct support</span>,
+<span class="highlight">real appreciation</span>,
+and a system that works for them.
+</p>
+
+<p>
+This platform will grow.
+</p>
+
+<p>
+More drivers.<br>
+More workers.<br>
+More direct support.
+</p>
+
+<p>
+And you’ll always be one of the ones who were here first.
+</p>
+
+</div>
+
+<a href="driver-setup.html" class="button">Continue to Driver Setup</a>
+
+<p class="footer">
+Rooted in the Core. Marked by the Brand. Rock Solid for Life.
+</p>
+
+</div>
+
+</body>
+</html>
