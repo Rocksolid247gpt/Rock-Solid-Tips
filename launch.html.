@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Solid Tips Launch Countdown</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a 0%, #000000 65%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 850px;
+      padding: 40px 25px;
+      border: 2px solid #ff4fd8;
+      border-radius: 22px;
+      background: rgba(0, 0, 0, 0.82);
+      box-shadow: 0 0 25px rgba(255, 79, 216, 0.35);
+    }
+
+    .brand {
+      font-size: clamp(2.3rem, 6vw, 4.4rem);
+      font-weight: 900;
+      color: #ff4fd8;
+      text-shadow: 0 0 14px rgba(255, 79, 216, 0.65);
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      color: #f5f5f5;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .subtext {
+      font-size: clamp(0.95rem, 2.1vw, 1.1rem);
+      color: #d8d8d8;
+      margin-bottom: 35px;
+      line-height: 1.6;
+    }
+
+    .launch-label {
+      font-size: 1.15rem;
+      color: #ffb3ef;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-bottom: 35px;
+    }
+
+    .time-box {
+      background: #111111;
+      border: 1px solid #ff4fd8;
+      border-radius: 18px;
+      padding: 20px 10px;
+      box-shadow: 0 0 12px rgba(255, 79, 216, 0.18);
+    }
+
+    .time-box span {
+      display: block;
+    }
+
+    .time-number {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .time-label {
+      font-size: 0.9rem;
+      color: #ffb3ef;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .bottom-line {
+      font-size: clamp(1rem, 2.4vw, 1.2rem);
+      color: #ffffff;
+      margin-top: 8px;
+      font-weight: 700;
+    }
+
+    .small-note {
+      margin-top: 18px;
+      color: #bbbbbb;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .live-message {
+      display: none;
+      margin-top: 25px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ff4fd8;
+      text-shadow: 0 0 10px rgba(255, 79, 216, 0.45);
+    }
+
+    @media (max-width: 700px) {
+      .countdown {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .container {
+        padding: 30px 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .countdown {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .time-box {
+        padding: 16px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand">Rock Solid Tips</h1>
+
+    <p class="tagline">
+      The countdown is on.
+    </p>
+
+    <p class="subtext">
+      A direct tipping platform built for drivers and service workers.<br>
+      Real support. Direct tips. Built different.
+    </p>
+
+    <div class="launch-label">Launching Soon</div>
+
+    <div class="countdown" id="countdown">
+      <div class="time-box">
+        <span class="time-number" id="days">00</span>
+        <span class="time-label">Days</span>
+      </div>
+      <div class="time-box">
+        <span class="time-number" id="hours">00</span>
+        <span class="time-label">Hours</span>
+      </div>
+      <div class="time-box">
+        <span class="time-number" id="minutes">00</span>
+        <span class="time-label">Minutes</span>
+      </div>
+      <div class="time-box">
+        <span class="time-number" id="seconds">00</span>
+        <span class="time-label">Seconds</span>
+      </div>
+    </div>
+
+    <div class="bottom-line">
+      100% of the tip goes to the driver.
+    </div>
+
+    <div class="small-note">
+      Rock Solid Tips is getting ready to go live.
+    </div>
+
+    <div class="live-message" id="liveMessage">
+      We’re live! Redirecting now...
+    </div>
+  </div>
+
+  <script>
+    // ============================
+    // SET YOUR LAUNCH DATE HERE
+    // Format: "Month Day, Year HH:MM:SS"
+    // Example below:
+    // ============================
+    const launchDate = new Date("March 31, 2026 12:00:00").getTime();
+
+    // ============================
+    // SET YOUR MAIN WEBSITE URL HERE
+    // Replace this with your real homepage
+    // ============================
+    const redirectURL = "https://YOURDOMAINHERE.com/";
+
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+    const countdownEl = document.getElementById("countdown");
+    const liveMessageEl = document.getElementById("liveMessage");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance <= 0) {
+        countdownEl.style.display = "none";
+        liveMessageEl.style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = redirectURL;
+        }, 2000);
+
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysEl.textContent = String(days).padStart(2, "0");
+      hoursEl.textContent = String(hours).padStart(2, "0");
+      minutesEl.textContent = String(minutes).padStart(2, "0");
+      secondsEl.textContent = String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
