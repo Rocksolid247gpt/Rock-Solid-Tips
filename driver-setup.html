@@ -197,7 +197,12 @@
       const driverName = document.getElementById("driverName").value.trim();
       const serviceType = document.getElementById("serviceType").value.trim();
       const tipLink = document.getElementById("tipLink").value.trim();
+const driverAgree = document.getElementById("driverAgree");
 
+if (!driverAgree.checked) {
+  alert("You must confirm that the payment link belongs to you.");
+  return;
+}
       const result = document.getElementById("result");
       const driverInfo = document.getElementById("driverInfo");
       const tipLinkDisplay = document.getElementById("tipLinkDisplay");
