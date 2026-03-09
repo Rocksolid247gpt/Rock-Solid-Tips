@@ -1,1 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driver Setup | Rock Solid Tips</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
 
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    h1 {
+      color: #ff4fd8;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .subtext {
+      font-size: 1rem;
+      color: #ddd;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .card {
+      background: #111;
+      border: 2px solid #ff4fd8;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 0 18px rgba(255, 79, 216, 0.25);
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin: 18px 0 8px;
+      font-weight: bold;
+      color: #ff9ceb;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #555;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    input::placeholder {
+      color: #999;
+    }
+
+    button {
+      margin-top: 24px;
+      width: 100%;
+      padding: 15px;
+      background: #ff4fd8;
+      color: #000;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff79e2;
+    }
+
+    #result {
+      margin-top: 35px;
+      padding: 25px;
+      background: #0d0d0d;
+      border-radius: 16px;
+      border: 1px solid #333;
+      display: none;
+    }
+
+    #result h2 {
+      color: #ff4fd8;
+      margin-bottom: 10px;
+    }
+
+    #result p {
+      margin: 8px 0;
+      color: #ddd;
+      word-break: break-word;
+    }
+
+    #qrImage {
+      margin-top: 20px;
+      max-width: 280px;
+      width: 100%;
+      border-radius: 12px;
+      background: #fff;
+      padding: 10px;
+    }
+
+    .tip-link-box {
+      margin-top: 15px;
+      padding: 12px;
+      background: #1a1a1a;
+      border: 1px solid #444;
+      border-radius: 10px;
+      color: #fff;
+      word-break: break-all;
+    }
+
+    .download-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #ff4fd8;
+      color: #000;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .download-link:hover {
+      background: #ff79e2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Driver Setup</h1>
+    <p class="subtext">
+      Welcome to Rock Solid Tips. Enter your information below and paste the payment link
+      you want customers to use when tipping you.
+    </p>
+
+    <div class="card">
+      <label for="driverName">Driver Name</label>
+      <input
+        type="text"
+        id="driverName"
+        placeholder="Enter your name"
+      />
+
+      <label for="serviceType">Service Type</label>
+      <select id="serviceType">
+        <option value="">Select your service</option>
+        <option value="Spark Driver">Spark Driver</option>
+        <option value="DoorDash Driver">DoorDash Driver</option>
+        <option value="Instacart Shopper">Instacart Shopper</option>
+        <option value="Uber Driver">Uber Driver</option>
+        <option value="Lyft Driver">Lyft Driver</option>
+        <option value="Delivery Driver">Delivery Driver</option>
+        <option value="Server">Server</option>
+        <option value="Other Service Worker">Other Service Worker</option>
+      </select>
+
+      <label for="tipLink">Your Payment Link</label>
+      <input
+        type="url"
+        id="tipLink"
+        placeholder="https://cash.app/$yourname or https://venmo.com/u/yourname"
+      />
+
+      <button type="button" onclick="generateDriverQR()">Generate My QR Code</button>
+    </div>
+
+    <div id="result">
+      <h2>Your Rock Solid Tips QR Code</h2>
+      <p id="driverInfo"></p>
+      <div class="tip-link-box" id="tipLinkDisplay"></div>
+      <img id="qrImage" src="" alt="Driver QR Code" />
+      <br />
+      <a id="downloadQR" class="download-link" href="#" download="rock-solid-driver-qr.png">
+        Download QR Code
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function generateDriverQR() {
+      const driverName = document.getElementById("driverName").value.trim();
+      const serviceType = document.getElementById("serviceType").value.trim();
+      const tipLink = document.getElementById("tipLink").value.trim();
+
+      const result = document.getElementById("result");
+      const driverInfo = document.getElementById("driverInfo");
+      const tipLinkDisplay = document.getElementById("tipLinkDisplay");
+      const qrImage = document.getElementById("qrImage");
+      const downloadQR = document.getElementById("downloadQR");
+
+      if (!tipLink) {
+        alert("Please paste your payment link first.");
+        return;
+      }
+
+      const qrUrl =
+        "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" +
+        encodeURIComponent(tipLink);
+
+      driverInfo.textContent =
+        (driverName ? driverName : "Driver") +
+        (serviceType ? " | " + serviceType : "");
+
+      tipLinkDisplay.textContent = tipLink;
+      qrImage.src = qrUrl;
+      downloadQR.href = qrUrl;
+      result.style.display = "block";
+    }
+  </script>
+</body>
+</html>
